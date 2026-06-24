@@ -1,15 +1,16 @@
-combustible = 100
-salto_espacial = 5
-while salto_espacial > 0:
-    gasto = int(input("¿Cuánta gasolina se gasto en el viaje? "))
-    if combustible > 0:
-        salto_espacial -= 1
-        combustible -= gasto
-    if combustible <= 0:
-        print("Te haz quedado sin combustible, nave barada")
-        break
-if salto_espacial == 0:
-    print("Se acabaron los viajes espaciales de hoy")
-    if combustible > 0:
-        print("✅ Misión exitosa. Llegaste al destino con", combustible, "de combustible de sobra.")
+fuel = 100
+space_jumps = 5
+
+while space_jumps > 0:
+    expense = int(input("How much fuel was spent on the journey? "))
+    space_jumps -= 1
+    fuel -= expense
     
+    if fuel <= 0:
+        print("You have run out of fuel, ship stranded.")
+        break
+
+if space_jumps == 0:
+    print("Today's space journeys are over.")
+    if fuel > 0:
+        print(f"✅ Mission successful. You arrived at the destination with {fuel} fuel to spare.")
